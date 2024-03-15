@@ -70,6 +70,8 @@ class Empresa:
     '''
     def darCostoPromedioMinuto(self):
         # TODO Parte3 PuntoH: Completar el m�todo seg�n la documentaci�n dada.
+        costoPromedio =  self.darTotalCostoLlamadas ([0, 1, 2]) / self.darTotalMinutos ([0, 1, 2])
+        return costoPromedio
 
     '''
         # Agrega una llamada local a la l�nea telef�nica 1 <br>
@@ -86,6 +88,7 @@ class Empresa:
     '''
     def agregarLlamadaLocalLinea2(self, pMinutos):
         # TODO Parte3 PuntoI: Completar el m�todo seg�n la documentaci�n dada.
+        self.linea2.agregarLlamadaLocal(pMinutos)
 
     '''
         # Agrega una llamada local a la l�nea telef�nica 3. <br>
@@ -94,6 +97,7 @@ class Empresa:
     '''
     def agregarLlamadaLocalLinea3(self, pMinutos):
         # TODO Parte3 PuntoJ: Completar el m�todo seg�n la documentaci�n dada.
+        self.linea3.agregarLlamadaLocal(pMinutos)
 
     '''
         # Agrega una llamada de larga distancia a la l�nea telef�nica 1. <br>
@@ -110,6 +114,7 @@ class Empresa:
     '''
     def agregarLlamadaLargaDistanciaLinea2(self, pMinutos):
         # TODO Parte3 PuntoK: Completar el m�todo seg�n la documentaci�n dada.
+        self.linea2.agregarLlamadaLargaDistancia(pMinutos)
     
     '''
         # Agrega una llamada de larga distancia a la l�nea telef�nica 3. <br>
@@ -118,6 +123,7 @@ class Empresa:
     '''
     def agregarLlamadaLargaDistanciaLinea3(self, pMinutos):
         # TODO Parte3 PuntoL: Completar el m�todo seg�n la documentaci�n dada.
+        self.linea3.agregarLlamadaLargaDistancia(pMinutos)
 
     '''
         # Agrega una llamada a celular a la l�nea telef�nica 1. <br>
@@ -134,6 +140,7 @@ class Empresa:
     '''
     def agregarLlamadaCelularLinea2(self, pMinutos):
         # TODO Parte3 PuntoM: Completar el m�todo seg�n la documentaci�n dada.
+        self.linea2.agregarLlamadaLargaDistancia(pMinutos)
     
     '''
         # Agrega una llamada a celular a la l�nea telef�nica 3. <br>
@@ -142,14 +149,17 @@ class Empresa:
     '''
     def agregarLlamadaCelularLinea3(self, pMinutos):
         #TODO Parte3 PuntoN: Completar el m�todo seg�n la documentaci�n dada.
+        self.linea3.agregarLlamadaLargaDistancia(pMinutos)
     
     '''
         # Reinicia todas las l�neas telef�nicas.
         # <b>post: </b> Se reinici� la llamada a la l�nea 1, 2 y 3. 
     '''
     def reiniciar(self):
-        self.linea1.reiniciar()
         # // TODO Parte3 PuntoB: Completar el m�todo para reiniciar las lineas 2 y 3.
+        self.linea1.reiniciar()
+        self.linea2.reiniciar()
+        self.linea3.reiniciar()
 
     '''----------------------------------------------------------------
     # Puntos de Extensi�n
