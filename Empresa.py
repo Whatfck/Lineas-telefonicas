@@ -41,23 +41,28 @@ class Empresa:
 	    # Retorna el n�mero total de llamadas realizadas.
 	    # @return Total de llamadas de las tres l�neas.
 	'''
-    def darTotalNumeroLlamadas(self):
+    def darTotalNumeroLlamadas(self, numeroLlamadas):
         # TODO Parte3 PuntoE: Completar el m�todo seg�n la documentaci�n dada.
-        return self.darLinea1() + self.darLinea2() + self.darLinea3()
+        totalLLamadas = numeroLlamadas[0] + numeroLlamadas[1] + numeroLlamadas[2]
+        return totalLLamadas
 
     '''
 	    # Retorna el total de minutos consumidos.
 	    # @return Total de minutos de las tres l�neas.
 	'''
-    def darTotalMinutos(self):
+    def darTotalMinutos(self, numeroMinutos):
         # TODO Parte3 PuntoF: Completar el m�todo seg�n la documentaci�n dada.
+        totalMinutos = numeroMinutos[0] + numeroMinutos[1] + numeroMinutos[2]
+        return totalMinutos
 
     '''
 	    # Retorna el costo total de las llamadas realizadas.
 	    # @return Costo total de las tres l�neas.
     '''
-    def darTotalCostoLlamadas(self):
+    def darTotalCostoLlamadas(self, costoLlamadas):
         # TODO Parte3 PuntoG: Completar el m�todo seg�n la documentaci�n dada.
+        totalCosto = costoLlamadas[0] + costoLlamadas[1] + costoLlamadas[2]
+        return totalCosto
 
     '''
         # Retorna el costo promedio de un minuto, seg�n los minutos consumidos. <br>

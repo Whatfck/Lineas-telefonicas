@@ -26,25 +26,25 @@ class LineaTelefonica:
     #Retorna el costo total de las llamadas realizadas.
     def darCostoLlamadas(self):
         # TODO Parte2 PuntoB: Completar el método según la documentación dada.
-        return self.costo_llamadas
+        return self.costoLlamadas
 
     # Retorna el número de llamadas realizadas por esta línea.
     def darNumeroLlamadas(self):
         # TODO Parte2 PuntoC: Completar el método según la documentación dada.
-        return self.numero_llamadas
+        return self.numeroLlamadas
         
     # Retorna el número de minutos consumidos.
     def darNumeroMinutos(self):
         # TODO Parte2 PuntoD: Completar el método según la documentación dada.
-        return self.minutos_llamadas
+        return self.numeroMinutos
 
     # Reinicia la línea telefónica, dejando todos sus valores en cero.
     # post: El número de llamadas, número de minutos y costo de llamadas son 0.
     def reiniciar(self):
         # TODO Parte2 PuntoE: Completar el método según la documentación dada.
-        self.numero_llamadas = 0
-        self.minutos_llamadas = 0
-        self.costo_llamadas = 0
+        self.numeroLlamadas = 0
+        self.numeroMinutos = 0
+        self.costoLlamadas = 0
 
     # Agrega una llamada local a la línea telefónica
     # post: Se incrementá en 1 numeroDeLlamadas, se incremento numeroDeMinutos en minutos, costoLlamadas aumentá en ( minutos * 35 ).
