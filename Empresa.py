@@ -25,14 +25,17 @@ class Empresa:
     # Retorna la l�nea 1.
     def darLinea1(self):
         # TODO Parte3 PuntoB: Completar el m�todo seg�n la documentaci�n dada.
-
+        return self.linea1
+    
     # Retorna la l�nea 2.
     def darLinea2(self):
         # // TODO Parte3 PuntoC: Completar el m�todo seg�n la documentaci�n dada.
+        return self.linea2
 
     # Retorna la l�nea 3.
     def darLinea3(self):
         # // TODO Parte3 PuntoD: Completar el m�todo seg�n la documentaci�n dada.
+        return self.linea3
 
     '''
 	    # Retorna el n�mero total de llamadas realizadas.
@@ -40,6 +43,7 @@ class Empresa:
 	'''
     def darTotalNumeroLlamadas(self):
         # TODO Parte3 PuntoE: Completar el m�todo seg�n la documentaci�n dada.
+        return self.darLinea1() + self.darLinea2() + self.darLinea3()
 
     '''
 	    # Retorna el total de minutos consumidos.
