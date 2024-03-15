@@ -70,7 +70,7 @@ class Empresa:
     '''
     def darCostoPromedioMinuto(self):
         # TODO Parte3 PuntoH: Completar el m�todo seg�n la documentaci�n dada.
-        costoPromedio =  self.darTotalCostoLlamadas ([0, 1, 2]) / self.darTotalMinutos ([0, 1, 2])
+        costoPromedio =  self.darTotalCostoLlamadas / self.darTotalMinutos
         return costoPromedio
 
     '''
