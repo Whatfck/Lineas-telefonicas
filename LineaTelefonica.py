@@ -18,6 +18,9 @@ class LineaTelefonica:
     # Descuento para llamadas
     descuento = 0.0  # Tipo: float. Rango de valores: 0.0 a 25.5
     
+    # Dinero disponible para gastar
+    saldo = 0
+
     '''----------------------------------------------------------------
     # Metodos
     ----------------------------------------------------------------'''
@@ -79,6 +82,8 @@ class LineaTelefonica:
         self.numeroMinutos += pMinutos
         # Suma el costo (costo por minuto: 380 pesos)
         self.costoLlamadas += pMinutos * 380        
+        # Resta el costo de la llamada a saldo
+        self.saldo - (pMinutos * 380)
 
     '''
         Agrega una llamada a celular a la lÍnea telefónica
@@ -101,3 +106,15 @@ class LineaTelefonica:
     def aplicarDescuento(self):
         descuentoAplicado = (self.costoLlamadas * self.descuento) / 100
         return descuentoAplicado
+
+    def consulatarSaldo(self):
+        return self.saldo
+    
+    def recargaSaldo(self, valor):
+        self.saldo += valor
+        return self.saldo
+
+    def motivarCliente(self):
+        self.saldo += (self.numeroMinutos // 30) * 1000
+        return self.saldo
+     
