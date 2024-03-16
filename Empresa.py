@@ -174,3 +174,11 @@ class Empresa:
     # @return Respuesta 2.
     def metodo2(self):
         return "Respuesta 2"
+
+    def aplicarDescuentoATodos(self):
+        totalDescuentoAplicado = 0
+        totalDescuentoAplicado += self.linea1.aplicarDescuento()
+        totalDescuentoAplicado += self.linea2.aplicarDescuento()
+        totalDescuentoAplicado += self.linea3.aplicarDescuento()
+        return totalDescuentoAplicado
+    

@@ -101,5 +101,3 @@ class LineaTelefonica:
     def aplicarDescuento(self):
         descuentoAplicado = (self.costoLlamadas * self.descuento) / 100
         return descuentoAplicado
-
-  
