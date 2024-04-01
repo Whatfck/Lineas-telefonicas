@@ -18,10 +18,20 @@ class Empresa:
     
     def __init__(self):
         # TODO Parte3 PuntoA: Construir linea2 y linea3.
-        self.linea1 = LineaTelefonica()
-        self.linea2 = LineaTelefonica()
-        self.linea3 = LineaTelefonica()
-            
+
+        self.lineas = [
+            LineaTelefonica(),
+            LineaTelefonica(),
+            LineaTelefonica()
+        ]
+
+        # Línea 1
+        self.lineas[0].definirEstrato(2)
+        # Línea 2
+        self.lineas[1].definirEstrato(5)
+        # Línea 3
+        self.lineas[2].definirEstrato(6)
+
     # Retorna la l�nea 1.
     def darLinea1(self):
         # TODO Parte3 PuntoB: Completar el m�todo seg�n la documentaci�n dada.
@@ -168,12 +178,14 @@ class Empresa:
     # M�todo para la extensi�n 1.
     # @return Respuesta 1.
     def metodo1(self):
-        return "Respuesta 1"
+        resultado = self.darTotalMinutosCelular()
+        return "El total de minutos a celular es: " + str(resultado)
 
     # M�todo para la extensi�n 2.
     # @return Respuesta 2.
-    def metodo2(self):
-        return "Respuesta 2"
+    def metodo2(self,):
+        valorBono = self.darTotalCostoCelular() * 0.02
+        return "El valor del bono es: " + str(valorBono)
 
     def aplicarDescuentoATodos(self):
         totalDescuentoAplicado = 0
@@ -181,4 +193,20 @@ class Empresa:
         totalDescuentoAplicado += self.linea2.aplicarDescuento()
         totalDescuentoAplicado += self.linea3.aplicarDescuento()
         return totalDescuentoAplicado
+    
+    def darTotalMinutosPorEstrato(self):
+        totalMinutosEstrato = 0
+        for linea in self.lineas:
+            totalMinutosEstrato += linea.darMinutosPorEstrato()
+        return totalMinutosEstrato
+    
+    def darTotalMinutosCelular(self, numeroMinutosC):
+        totalMinutosC = numeroMinutosC [0] + numeroMinutosC [1] + numeroMinutosC [2]
+        return totalMinutosC
+    
+    def darTotalCostoCelular(self, CostoC):
+        totalCostoC = CostoC [0] + CostoC [1] + CostoC [2]
+        return totalCostoC
+    
+
     
